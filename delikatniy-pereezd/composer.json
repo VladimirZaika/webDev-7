@@ -1,0 +1,33 @@
+{
+    "name": "sicom/project-ctl",
+    "type": "project",
+    "authors": [
+        {
+            "name": "SiCoM",
+            "email": "42@sicom.pro"
+        }
+    ],
+    "require": {},
+    "scripts": {
+        "build": [
+            "cd src && ./node_modules/.bin/encore dev --color",
+            "rm ./assets/entrypoints.json ./assets/manifest.json"
+        ],
+        "code-check": [
+            "@php-check",
+            "@js-check",
+            "@style-check"
+        ],
+        "style-check": [
+            "cd src && ./node_modules/.bin/stylelint scss/**/*.scss --color"
+        ],
+        "js-check": "cd src && ./node_modules/.bin/eslint js/**/*.js",
+        "php-check": "phpcs",
+        "php-report": "phpcs --report=summary,gitblame",
+        "symlinks": [
+            "ln -sfn wp-content/themes/${PWD##*/}/ ~/html/theme",
+            "ln -sfn wp-content/themes/${PWD##*/}/ ~/theme"
+        ],
+        "scripts": "composer run --list --ansi"
+    }
+}

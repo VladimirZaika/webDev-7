@@ -1,0 +1,26 @@
+{
+  "name": "loremwp",
+  "version": "1.0.0",
+  "description": "Theme starter kit",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yevgeniy Zinchenko",
+  "license": "ISC",
+  "devDependencies": {
+    "@symfony/webpack-encore": "^1.1.0",
+    "@wordpress/eslint-plugin": "^8.0.2",
+    "@wordpress/stylelint-config": "^19.0.1",
+    "bootstrap": "^4.6.0",
+    "core-js": "^3.8.3",
+    "sass": "^1.32.5",
+    "sass-loader": "^10.1.1"
+  },
+  "dependencies": {
+    "dom7": "^3.0.0",
+    "jquery": "^3.6.0",
+    "ssr-window": "^3.0.0",
+    "swiper": "^6.5.3"
+  }
+}
